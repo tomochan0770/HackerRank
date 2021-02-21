@@ -1,3 +1,4 @@
 # HackerRank
 
-がんばります。
+## 概要
+HackerRankというサイトの30daysチャレンジです。
