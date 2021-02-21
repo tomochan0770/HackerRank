@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH=`git branch | grep "*" | sed -e "s/* //g"`
+BRANCH=`git branch | grep "* " | sed -e "s/* //g"`
 
 count=1
 message=""
