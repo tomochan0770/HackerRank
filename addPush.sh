@@ -9,6 +9,7 @@ while [ "$#" -ge "1" ]; do
 	shift
 	let count=$count+1
 done
+echo $BRNACH
 
 git add .
 git commit -m "$message"
