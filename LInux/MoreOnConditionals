@@ -1,0 +1,30 @@
+#!/bin/sh
+
+read a
+read b
+read c
+
+ret=0
+if  [ "$a" -eq "$b" ]
+then   
+    ret=`expr $ret + 1`
+fi
+if  [ "$a" -eq "$c" ]
+then   
+    ret=`expr $ret + 1`
+fi
+if  [ "$b" -eq "$c" ]
+then   
+    ret=`expr $ret + 1`
+fi
+
+if [ "$ret" == 3 ]
+then
+    echo "EQUILATERAL"
+elif [ "$ret" == 2 -o "$ret" == 1 ]
+then
+    echo "ISOSCELES"
+else
+    echo "SCALENE"
+fi
+    
