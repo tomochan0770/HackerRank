@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH=`git branch | grep "* " | sed -e "s/* //g"`
+BRANCH=`git branch | grep "*" | sed -e "s/* //g"`
 
 count=1
 message=""
@@ -9,7 +9,7 @@ while [ "$#" -ge "1" ]; do
 	shift
 	let count=$count+1
 done
-echo $BRNACH
+echo $BRANCH
 
 git add .
 git commit -m "$message"
