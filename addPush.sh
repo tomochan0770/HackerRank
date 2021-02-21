@@ -1,8 +1,15 @@
 #!/bin/sh
 
-BRANCH=`git branch | grep -v "master" | sed -e "s/* //g"`
+BRANCH=`git branch | grep "*" | sed -e "s/* //g"`
 
+count=1
+message=""
+while [ "$#" -ge "1" ]; do
+	message="$message $1"
+	shift
+	let count=$count+1
+done
 
 git add .
-git commit -m "$1 commit"
+git commit -m "$message"
 git push origin $BRANCH
